@@ -3,12 +3,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import queryString from "query-string";
 
 import "./App.scss";
+// ------------ TODO LIST ------------
 // import ColorBox from "./components/colorBox";
 // import TodoList from "./components/todoList";
 // import TodoForm from "./components/todoForm";
+// ------------ POST LIST ------------
 import PostList from "./components/postList";
 import Pagination from "./components/pagination";
 import Search from "./components/search";
+// ------------ CLOCK ------------
+import Clock from "./components/clock";
+// ------------ MAGIC BOX ------------
+import MagicBox from "./components/magicBox";
 function App() {
   // ------------ TODO LIST ------------
   // const [todoList, setTodoList] = useState([
@@ -67,11 +73,17 @@ function App() {
     console.log(formValues.textSearch);
     setFilter({ ...filter, _page: 1, title_like: formValues.textSearch });
   }
+
   return (
     <div className="App">
+      <h1>MAGIC BOX</h1>
+      <MagicBox />
+      {/* <h1>Clock</h1>
+      <Clock /> */}
+      {/* <h1>Post List</h1>
       <Search onInputChange={handleSearch} />
       <PostList posts={postList} />
-      <Pagination pagination={pagination} onPageChange={handlePageChange} />
+      <Pagination pagination={pagination} onPageChange={handlePageChange} /> */}
 
       {/* <h1>Todo List</h1>
       <TodoList todos={todoList} onTodoList={onClickTodo} />
